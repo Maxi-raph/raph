@@ -1,0 +1,153 @@
+
+body{
+
+    line-height:1.5;
+  
+  }
+  
+  #navbar header{
+  
+    border-bottom:solid;
+  
+    font-size:17px;
+  
+    text-align:center;
+  
+  }
+  
+  #navbar{
+  
+    position:fixed;
+  
+    top:0;
+  
+    left:0;
+  
+    width:135px;
+  
+    border-right:solid;
+  
+    height:100%;
+  
+    border-bottom:solid;
+  
+  }
+  
+  #navbar li{
+  
+    border-bottom:1px solid;
+  
+    font-size:16px;
+  
+    text-align:left;
+  
+    list-style:none;
+  
+    padding:0px 5px;
+
+    color: black;
+  }
+  
+  #navbar ul{
+  
+    padding: 0;
+  
+  }
+  
+  #navbar a{
+  
+    text-decoration:none;
+  
+  }
+  #main-doc header{
+  
+    text-align:left;
+  
+    font-size:25px;
+  
+  }
+  
+  code{
+  
+    display:block;
+  
+    background-color:#E1E1E1;
+  
+    width:100%;
+  
+  }
+  
+  #main-doc{
+  
+    margin-left:130px;
+  
+  }
+  #menu-btn{
+    display:none;
+  }
+  @media(max-width:700px){
+  
+    #navbar{
+      width:100%;
+      background-color: #fff;
+      top:0;
+      height: auto;
+    }
+    #main-doc{
+      top:55%;
+     margin-left:-130px;
+     width: 90%;
+     margin: auto;
+    }
+  .menu{
+    display: none;
+    position: absolute;
+  }
+  .menu-icon{
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+  }
+  .menu-icon .nav-icon{
+    background-color: black;
+    width: 18px;
+    height: 2px;
+    display: block;
+    float:none;
+    top: 8px;
+    z-index:2;
+    position:fixed;
+  }
+  .menu-icon .nav-icon::before,.menu-icon .nav-icon::after{
+    display: block;
+    content:'';
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background-color:black;
+  }
+  .menu-icon .nav-icon::before{
+    top:5px;
+  }
+  .menu-icon .nav-icon::after{
+    top:-5px;
+  }
+  #menu-btn:checked~ .menu-icon .nav-icon{
+    background: transparent;
+  }
+  #menu-btn:checked~ .menu-icon .nav-icon::before{
+    transform: rotate(45deg);
+    top: 0;
+  }
+  #menu-btn:checked~ .menu-icon .nav-icon::after{
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  #menu-btn{
+    display: none;
+  }
+  #menu-btn:checked~ .menu{
+    display: block;
+  }
+  
+}
